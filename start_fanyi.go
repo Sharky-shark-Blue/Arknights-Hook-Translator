@@ -141,14 +141,30 @@ func shouldSaveUntranslated(text string) bool {
 	if plain == "" {
 		return false
 	}
-	if rePureNumber.MatchString(plain)     { return false }
-	if reSlashNumber.MatchString(plain)    { return false }
-	if reNumberPair.MatchString(plain)     { return false }
-	if rePercent.MatchString(plain)        { return false }
-	if reTimeText.MatchString(plain)       { return false }
-	if reEnglishOnly.MatchString(plain)    { return false }
-	if reNumberSymbolOnly.MatchString(plain) { return false }
-	if !reJapaneseOrHan.MatchString(plain) { return false }
+	if rePureNumber.MatchString(plain) {
+		return false
+	}
+	if reSlashNumber.MatchString(plain) {
+		return false
+	}
+	if reNumberPair.MatchString(plain) {
+		return false
+	}
+	if rePercent.MatchString(plain) {
+		return false
+	}
+	if reTimeText.MatchString(plain) {
+		return false
+	}
+	if reEnglishOnly.MatchString(plain) {
+		return false
+	}
+	if reNumberSymbolOnly.MatchString(plain) {
+		return false
+	}
+	if !reJapaneseOrHan.MatchString(plain) {
+		return false
+	}
 	return true
 }
 
@@ -216,7 +232,8 @@ func startTransAutoSave() {
 }
 
 // ★ 修复：移除了遗留的 saveTransMapLocked() 实时写盘调用
-//   只标记 dirty，由 autoSave goroutine 统一落盘
+//
+//	只标记 dirty，由 autoSave goroutine 统一落盘
 func addUntranslatedToTrans(text string) {
 	text = normalizeText(text)
 	if text == "" || !shouldSaveUntranslated(text) {

@@ -108,10 +108,18 @@ echo  屏幕只显示当前捕获文本：
 echo  有中文翻译 -^> 显示中文
 echo  没中文翻译 -^> 显示日文
 echo  新文本会写入 trans.json
+echo.
+echo  [注意] 如果游戏注入后反复崩溃，请关闭本窗口后改用：
+echo     start_fanyi.exe --spawn
+echo  spawn 模式由 frida 直接拉起游戏，可绕过运行时完整性检测
 echo ------------------------------------------------------------
 echo.
 
-start_fanyi.exe
+set SPAWN_MODE=
+if /i "%1"=="--spawn" set SPAWN_MODE=--spawn
+if /i "%SPAWN%"=="1" set SPAWN_MODE=--spawn
+
+start_fanyi.exe %SPAWN_MODE%
 
 echo.
 echo 程序已退出。
