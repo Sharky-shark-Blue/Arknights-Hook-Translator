@@ -60,6 +60,9 @@ func initAdbPath(workDir string) {
 }
 
 func clearConsole() {
+	if guiMode {
+		return
+	}
 	cmd := exec.Command("cmd", "/c", "cls")
 	cmd.Stdout = os.Stdout
 	_ = cmd.Run()
@@ -85,28 +88,42 @@ func clearLogcat() {
 }
 
 func cleanupResiduals() {
-	adbShell("su", "-c", "pkill -f "+packageName+" 2>/dev/null; pkill -f frida-inject 2>/dev/null; true")
+	adbShell("su", "-c", "pkill -f "+packageName+" 2>/dev/null; pkill -f frida-inject 2>/dev/null; pkill -x fserver 2>/dev/null; true")
 	time.Sleep(2 * time.Second)
 }
 
 func ensureFridaServer() {
-	listening := run(adbExe, "shell", "su -c 'ss -tlnp 2>/dev/null | grep -c 27042'")
+	// 如果设备上还没有改名后的二进制，先推送并 chmod
+	exists := strings.TrimSpace(run(adbExe, "shell", "su -c '[ -f "+fridaServerDevicePath+" ] && echo 1 || echo 0'"))
+	if exists != "1" {
+		localBin := filepath.Join(workDirGlobal, fridaServerLocalBin)
+		fmt.Println("[INFO] 推送 frida-server → fserver ...")
+		run(adbExe, "push", localBin, fridaServerDevicePath)
+		adbShell("su", "-c", "chmod 755 "+fridaServerDevicePath)
+	}
+
+	// 检测自定义端口是否已在监听
+	listening := run(adbExe, "shell", "su -c 'ss -tlnp 2>/dev/null | grep -c "+fridaPort+"'")
 	if strings.TrimSpace(listening) != "" && strings.TrimSpace(listening) != "0" {
+		run(adbExe, "forward", "tcp:"+fridaPort, "tcp:"+fridaPort)
 		return
 	}
-	fmt.Println("[INFO] frida-server 未运行，正在启动...")
-	run(adbExe, "shell", "su -c 'nohup /data/local/tmp/frida-server > /data/local/tmp/frida.log 2>&1 &'")
+
+	fmt.Println("[INFO] fserver 未运行，正在以端口", fridaPort, "启动...")
+	adbShell("su", "-c", "nohup "+fridaServerDevicePath+" -l 0.0.0.0:"+fridaPort+" > /data/local/tmp/frida.log 2>&1 &")
 	time.Sleep(3 * time.Second)
-	listening2 := run(adbExe, "shell", "su -c 'ss -tlnp 2>/dev/null | grep -c 27042'")
+	run(adbExe, "forward", "tcp:"+fridaPort, "tcp:"+fridaPort)
+
+	listening2 := run(adbExe, "shell", "su -c 'ss -tlnp 2>/dev/null | grep -c "+fridaPort+"'")
 	if strings.TrimSpace(listening2) == "" || strings.TrimSpace(listening2) == "0" {
-		fmt.Println("[WARN] frida-server 启动失败，查看日志:")
+		fmt.Println("[WARN] fserver 启动失败，查看日志:")
 		fmt.Println(run(adbExe, "shell", "su -c 'cat /data/local/tmp/frida.log'"))
 	}
 }
 
 func checkFridaReady() bool {
 	ensureFridaServer()
-	out := run("frida-ps", "-U")
+	out := run("frida-ps", "-H", "127.0.0.1:"+fridaPort)
 	lower := strings.ToLower(out)
 	if strings.Contains(lower, "failed") ||
 		strings.Contains(lower, "unable") ||

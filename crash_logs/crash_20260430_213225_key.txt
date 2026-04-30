@@ -1,0 +1,42 @@
+04-30 21:32:24.283  2993  7261 I ActivityManager: Process com.YoStarJP.Arknights (pid 20493) has died: fg  TOP 
+04-30 21:32:24.284  2993  3699 I WindowManager: WIN DEATH: Window{979e8ba u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}
+04-30 21:32:24.288  2993  3699 I WindowManager: Window{979e8ba u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} state from HAS_DRAWN to NO_SURFACE; reason: destroySurface
+04-30 21:32:24.290  2993  3699 V WindowManager: Changing focus from Window{979e8ba u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} to null,diplayid=0
+04-30 21:32:24.307  2993  7261 W ActivityTaskManager: Force removing ActivityRecord{1c43319 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} t70}: app died, no saved state
+04-30 21:32:24.320  2993  7261 I OplusScreenSecurityMask: onStackRemoved task = Task{be415bf #70 type=standard A=10485:com.YoStarJP.Arknights U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=0} record = null displayId = 0
+04-30 21:32:24.320  2993  7261 D TaskFragmentExtImpl: remove ActivityRecord{1c43319 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} t-1 f}} to mActivityRecordSum = Counter{ }
+04-30 21:32:24.329  2993  4641 D OplusAppSwitchListener: Detect com.YoStarJP.Arknights switch to background
+04-30 21:32:24.329  2993  4641 D OplusEapManager: mTargetExitName :com.YoStarJP.Arknights
+04-30 21:32:24.329  2993  4641 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppExit , info.targetName = com.YoStarJP.Arknights
+04-30 21:32:24.331  2993 19153 D VRR [OPlusRefreshRateService]:  setFrameRateTargetControl [ 0.0 , com.YoStarJP.Arknights , false , com.oplus.battery ]
+04-30 21:32:24.331  2993 19153 D VRR [OPlusExternalRefreshRateManager]:  [FRTC] FrameRate : 0 com.YoStarJP.Arknights false com.oplus.battery 0 1000
+04-30 21:32:24.333  2993  3641 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: null CurPkgName: com.YoStarJP.Arknights
+04-30 21:32:24.334  2993  3641 D VRR [OPlusGameStatusManager]: setFrontPackageName pkgName: null CurPkgName: com.YoStarJP.Arknights
+04-30 21:32:24.334  2993  3641 D VRR [OPlusSurfaceFlingerController]:  add frtc FrameRate : 0 com.YoStarJP.Arknights false com.oplus.battery
+04-30 21:32:24.423  2993  4271 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.YoStarJP.Arknights
+04-30 21:32:24.454  2993  8644 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.YoStarJP.Arknights
+04-30 21:32:24.635  2993  5548 W ActivityManager: Unable to start service Intent { cmp=com.oplus.crashbox/.ExceptionMonitorService } U=0: not found
+04-30 21:32:24.635  2993  5548 E OplusAnrCrashMonitor: Failed to bind to crash monitor service
+04-30 21:32:26.645  2993  5548 W ActivityManager: Unable to start service Intent { cmp=com.oplus.crashbox/.ExceptionMonitorService } U=0: not found
+04-30 21:32:26.645  2993  5548 E OplusAnrCrashMonitor: Failed to bind to crash monitor service
+04-30 21:32:26.743  4497  4955 E CommandException: Unrecognized subsys errno 2
+04-30 21:32:26.875  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:26.876  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:26.876  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:27.460  2993  2993 D TrimMemoryHandler: ProcessRecord{2b9bcb6 0:com.YoStarJP.Arknights/u0a485} hasForegroundActivities, skip trim
+04-30 21:32:27.894  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:27.896  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:27.896  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:27.908  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:27.909  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:28.656  2993  5548 W ActivityManager: Unable to start service Intent { cmp=com.oplus.crashbox/.ExceptionMonitorService } U=0: not found
+04-30 21:32:28.656  2993  5548 E OplusAnrCrashMonitor: Failed to bind to crash monitor service
+04-30 21:32:29.360  8173  9377 D AppSwitchObserverHelper: packageName: com.android.launcher,com.YoStarJP.Arknights
+04-30 21:32:29.700  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:29.701  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:30.019  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:30.113  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:30.118  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:30.118  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:30.121  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo
+04-30 21:32:30.185  2993 14438 D OplusPacketMonitor: SocketThread decodePacket catch exception: java.lang.ClassCastException: android.net.VpnTransportInfo cannot be cast to android.net.wifi.WifiInfo

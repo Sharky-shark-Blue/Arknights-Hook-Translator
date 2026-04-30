@@ -81,9 +81,9 @@ func handleUnicodeLine(line string) bool {
 	}
 	addUntranslatedToTrans(decoded)
 	if zh := localTranslate(decoded); zh != "" {
-		displayTextOnly(zh)
+		displayCapture(decoded, zh, true)
 	} else {
-		displayTextOnly(decoded)
+		displayCapture(decoded, decoded, false)
 	}
 	return true
 }

@@ -85,12 +85,12 @@ func runFridaCmd(cmd *exec.Cmd, onLine func(string), label string) {
 }
 
 func injectAttach(pid, hookPath string) {
-	cmd := exec.Command("frida", "-U", "-p", pid, "-l", hookPath)
+	cmd := exec.Command("frida", "-H", "127.0.0.1:"+fridaPort, "-p", pid, "-l", hookPath)
 	runFridaCmd(cmd, handleLine, "attach")
 }
 
 func injectSpawn(hookPath string) {
-	cmd := exec.Command("frida", "-U", "-f", packageName, "-l", hookPath)
+	cmd := exec.Command("frida", "-H", "127.0.0.1:"+fridaPort, "-f", packageName, "-l", hookPath)
 	runFridaCmd(cmd, func(line string) {
 		if !handleUnicodeLine(line) {
 			fmt.Println("[frida]", line)
