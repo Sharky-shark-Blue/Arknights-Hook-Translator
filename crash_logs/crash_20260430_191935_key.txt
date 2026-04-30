@@ -1,1 +1,0 @@
-04-30 19:19:32.291  8702  8702 D TrimMemoryHandler: ProcessRecord{543a147 0:com.YoStarJP.Arknights/u0a485} hasForegroundActivities, skip trim

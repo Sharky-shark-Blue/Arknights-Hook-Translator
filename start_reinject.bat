@@ -69,15 +69,13 @@ echo [OK] ADB 正常
 echo.
 
 echo [5/8] 检查 Frida...
-frida-ps -U >nul 2>nul
+where frida-ps >nul 2>nul
 if errorlevel 1 (
-    echo [ERROR] frida-ps -U 失败。
-    echo 请先启动手机端 Frida 服务。
+    echo [ERROR] 未找到 frida-ps，请安装: pip install frida-tools
     pause
-    exit /b
+    exit /b 1
 )
-
-echo [OK] Frida 正常
+echo [OK] frida-tools 已安装（device 端 frida-server 将由程序自动启动）
 echo.
 
 echo [6/8] 清理 logcat...
