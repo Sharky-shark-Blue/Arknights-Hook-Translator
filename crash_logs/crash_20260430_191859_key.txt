@@ -1,0 +1,34 @@
+04-30 19:18:49.586  8702 10241 D OplusFullScreenDisplayManager: adjustWindowParamsLw com.YoStarJP.Arknights, no change cutoutMode: 1
+04-30 19:18:49.586  8702 10241 V WindowManager: Relayout Window{55d9201 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}: viewVisibility=0, oldvis=0, req=2772x1240
+04-30 19:18:49.588  8702 10241 D WindowManager: Releasing screen wakelock due to Window{55d9201 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}
+04-30 19:18:49.735  8702 10241 D OplusFullScreenDisplayManager: adjustWindowParamsLw com.YoStarJP.Arknights, no change cutoutMode: 1
+04-30 19:18:49.737  8702 10241 V WindowManager: Relayout Window{55d9201 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}: viewVisibility=0, oldvis=0, req=2772x1240
+04-30 19:18:50.140  8702  8889 D VRR [OPlusGameStatusManager]: setLTMStatus false curPkgName: com.YoStarJP.Arknights curr status: false HeartStop: false HeartStopFromTGPA: false ActiveFPS: 120.00001
+04-30 19:18:50.141  8702  8889 D VRR [OPlusGameStatusManager]: updateGameAccelerationStatus pkgName: com.YoStarJP.Arknights mOSyncFeatureSwitch: false mIsGamePolicy: false mHeartStop: false mHasFlickerRisk: false mForceAcceleration: false mToastReady: false enable: false
+04-30 19:18:50.829  8702  8828 I WindowStateExtImpl: onSurfaceShowChange show = true mPackageName = com.google.android.gms parentPkgName = com.YoStarJP.Arknights
+04-30 19:18:55.034  8702 10241 I WindowStateExtImpl: onSurfaceShowChange show = false mPackageName = com.google.android.gms parentPkgName = com.YoStarJP.Arknights
+04-30 19:18:57.223  8702 13404 D OplusFullScreenDisplayManager: adjustWindowParamsLw com.YoStarJP.Arknights, no change cutoutMode: 1
+04-30 19:18:57.223  8702 13404 V WindowManager: Relayout Window{55d9201 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}: viewVisibility=0, oldvis=0, req=2772x1240
+04-30 19:18:57.231  8702 10241 D OplusFullScreenDisplayManager: adjustWindowParamsLw com.YoStarJP.Arknights, no change cutoutMode: 1
+04-30 19:18:57.231  8702 10241 V WindowManager: Relayout Window{55d9201 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}: viewVisibility=0, oldvis=0, req=2772x1240
+04-30 19:18:57.235  8702 10241 D WindowManager: Acquiring screen wakelock due to Window{55d9201 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}
+04-30 19:18:58.276  8702 13397 I WindowManager: WIN DEATH: Window{55d9201 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}
+04-30 19:18:58.276  8702 13397 I WindowManager: Window{55d9201 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} state from HAS_DRAWN to NO_SURFACE; reason: destroySurface
+04-30 19:18:58.279  8702  9635 I ActivityManager: Process com.YoStarJP.Arknights (pid 14244) has died: fg  TOP 
+04-30 19:18:58.284  8702 13397 V WindowManager: Changing focus from Window{55d9201 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} to null,diplayid=0
+04-30 19:18:58.288  8702 13397 D WindowManager: Releasing screen wakelock due to Window{55d9201 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}
+04-30 19:18:58.305  8702  9635 W ActivityTaskManager: Force removing ActivityRecord{7bc9b1c u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} t7}: app died, no saved state
+04-30 19:18:58.320  8702  9635 I OplusScreenSecurityMask: onStackRemoved task = Task{1587ec6 #7 type=standard A=10485:com.YoStarJP.Arknights U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=0} record = null displayId = 0
+04-30 19:18:58.320  8702  9635 D TaskFragmentExtImpl: remove ActivityRecord{7bc9b1c u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} t-1 f}} to mActivityRecordSum = Counter{ }
+04-30 19:18:58.347  8702  9925 D OplusAppSwitchListener: Detect com.YoStarJP.Arknights switch to background
+04-30 19:18:58.347  8702  9925 D OplusEapManager: mTargetExitName :com.YoStarJP.Arknights
+04-30 19:18:58.350  8702  9925 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppExit , info.targetName = com.YoStarJP.Arknights
+04-30 19:18:58.351  8702  8889 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: null CurPkgName: com.YoStarJP.Arknights
+04-30 19:18:58.351  8702  8889 D VRR [OPlusGameStatusManager]: setFrontPackageName pkgName: null CurPkgName: com.YoStarJP.Arknights
+04-30 19:18:58.356  8702 15523 D VRR [OPlusRefreshRateService]:  setFrameRateTargetControl [ 0.0 , com.YoStarJP.Arknights , false , com.oplus.battery ]
+04-30 19:18:58.356  8702 15523 D VRR [OPlusExternalRefreshRateManager]:  [FRTC] FrameRate : 0 com.YoStarJP.Arknights false com.oplus.battery 0 1000
+04-30 19:18:58.358  8702  8889 D VRR [OPlusSurfaceFlingerController]:  add frtc FrameRate : 0 com.YoStarJP.Arknights false com.oplus.battery
+04-30 19:18:58.720  8702 13737 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.YoStarJP.Arknights
+04-30 19:18:58.739  8702 13399 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.YoStarJP.Arknights
+04-30 19:19:01.030  9945 10273 E CommandException: Unrecognized subsys errno 2
+04-30 19:19:01.602  8702  8702 D TrimMemoryHandler: ProcessRecord{886b413 0:com.YoStarJP.Arknights/u0a485} hasForegroundActivities, skip trim

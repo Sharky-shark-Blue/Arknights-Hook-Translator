@@ -1,0 +1,20 @@
+04-30 19:20:56.328  8702 12848 I WindowManager: WIN DEATH: Window{30c5258 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}
+04-30 19:20:56.328  8702 12848 I WindowManager: Window{30c5258 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} state from HAS_DRAWN to NO_SURFACE; reason: destroySurface
+04-30 19:20:56.330  8702 12848 V WindowManager: Changing focus from Window{30c5258 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} to null,diplayid=0
+04-30 19:20:56.332  8702 12848 D WindowManager: Releasing screen wakelock due to Window{30c5258 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext}
+04-30 19:20:56.335  8702 13748 I ActivityManager: Process com.YoStarJP.Arknights (pid 23997) has died: fg  TOP 
+04-30 19:20:56.375  8702 13748 W ActivityTaskManager: Force removing ActivityRecord{2c9b849 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} t9}: app died, no saved state
+04-30 19:20:56.394  8702 13748 I OplusScreenSecurityMask: onStackRemoved task = Task{fb02a8b #9 type=standard A=10485:com.YoStarJP.Arknights U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=0} record = null displayId = 0
+04-30 19:20:56.395  8702 13748 D TaskFragmentExtImpl: remove ActivityRecord{2c9b849 u0 com.YoStarJP.Arknights/com.u8.sdk.U8UnityContext} t-1 f}} to mActivityRecordSum = Counter{ }
+04-30 19:20:56.409  8702  9925 D OplusAppSwitchListener: Detect com.YoStarJP.Arknights switch to background
+04-30 19:20:56.410  8702  9925 D OplusEapManager: mTargetExitName :com.YoStarJP.Arknights
+04-30 19:20:56.410  8702  9925 D VRR [OPlusFrontAppManager]: OnAppSwitchObserver: onAppExit , info.targetName = com.YoStarJP.Arknights
+04-30 19:20:56.410  8702  8889 D VRR [OPlusExternalRefreshRateManager]: setFrontPackageName pkgName: null CurPkgName: com.YoStarJP.Arknights
+04-30 19:20:56.410  8702  8889 D VRR [OPlusGameStatusManager]: setFrontPackageName pkgName: null CurPkgName: com.YoStarJP.Arknights
+04-30 19:20:56.427  8702 10792 D VRR [OPlusRefreshRateService]:  setFrameRateTargetControl [ 0.0 , com.YoStarJP.Arknights , false , com.oplus.battery ]
+04-30 19:20:56.427  8702 10792 D VRR [OPlusExternalRefreshRateManager]:  [FRTC] FrameRate : 0 com.YoStarJP.Arknights false com.oplus.battery 0 1000
+04-30 19:20:56.427  8702  8889 D VRR [OPlusSurfaceFlingerController]:  add frtc FrameRate : 0 com.YoStarJP.Arknights false com.oplus.battery
+04-30 19:20:56.649  8702 13396 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.YoStarJP.Arknights
+04-30 19:20:56.700  8702 10276 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.YoStarJP.Arknights
+04-30 19:20:59.632  8702  8702 D TrimMemoryHandler: ProcessRecord{106d214 0:com.YoStarJP.Arknights/u0a485} hasForegroundActivities, skip trim
+04-30 19:21:02.885  8702 10792 D OplusAppListInterceptManager: shouldFilterTask::packageName = com.YoStarJP.Arknights
